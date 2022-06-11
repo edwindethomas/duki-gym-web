@@ -11,7 +11,7 @@
 
     <?php 
     
-    echo "Hola mundo";
+    echo "Hola";
     ?>
 </body>
 </html>
