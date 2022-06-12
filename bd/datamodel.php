@@ -180,6 +180,45 @@ function BorrarMembresia($id)
     }
 }
 
+function SeleccionarUsuario($usuario,$password)
+{
+    try {
+        $cn = conexion();
+        $SqlSeleccionar = "SELECT * FROM entrenador WHERE entrenador.usuario='$usuario' AND entrenador.password='$password'";
+        $UsuarioSelect = $cn->query($SqlSeleccionar);
+        
+        if($UsuarioSelect->num_rows > 0) {
+            $Row = $UsuarioSelect -> fetch_assoc();
+            $Mensaje = "Prueba Usuario".$Row['nombrecompleto']." ".$Row['usuario']." ".$Row['password'];
+            $array = implode(" ",$Row);
+
+            $_SESSION['UserName'] = "Bienvenido".$Row['NombreAlumno']." ".$Row['ApellidoAlumno'];
+            $_SESSION['UserId'] = 
+
+            header("Location: ../indexentrenador.php");
+
+        }
+        $SqlSeleccionar = "SELECT * FROM nutriologo WHERE nutriologo.usuario='$usuario' AND nutriologo.password='$password'";
+        $UsuarioSelect = $cn->query($SqlSeleccionar);
+        if($UsuarioSelect->num_rows > 0) {
+            $Row = $UsuarioSelect -> fetch_assoc();
+            $Mensaje = "Prueba Usuario".$Row['nombrecompleto']." ".$Row['usuario']." ".$Row['password'];
+            $array = implode(" ",$Row);
+            header("Location: ../indexnutriologo.php");
+        }
+        $SqlSeleccionar = "SELECT * FROM cliente WHERE cliente.usuario='$usuario' AND cliente.password='$password'";
+        $UsuarioSelect = $cn->query($SqlSeleccionar);
+        if($UsuarioSelect->num_rows > 0) {
+            $Row = $UsuarioSelect -> fetch_assoc();
+            $Mensaje = "Prueba Usuario".$Row['nombrecompleto']." ".$Row['usuario']." ".$Row['password'];
+            $array = implode(" ",$Row);
+            header("Location: ../indexcliente.php");
+        }
+        return "CREDENCIALES DE USUARIO INEXISTENTES, VUELVA A INTENTARLO";
+    }catch (Exception $e){
+        return $e;
+    }
+}
 #echo InsertarEntrenador("Derian Cardenas","Derian@gmail.com","1234","2299063190");
 #echo InsertarNutriologo("Leo Messi","Leomessi@gmail.com","1234","2295892254");
 #echo InsertarCliente("1","EdwinDeThomas","edwin@gmail.com","1234","2299035433","1");
@@ -188,3 +227,4 @@ function BorrarMembresia($id)
 #echo InsertarMembresia("1", "9 junio", "activo", "bancomer", "300.00");
 #echo InsertarSalud("1","89.9","170.9","28.0");
 #echo BorrarRutina("2");
+echo SeleccionarUsuario("Derian@gmail.com","1234");
