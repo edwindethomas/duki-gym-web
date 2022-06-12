@@ -49,9 +49,9 @@
                     }
                     }
     
-  # echo InsertarEntrenador("Derian Cardenas","Derian@gmail.com","1234","2299063190");
-  # echo InsertarNutriologo("Leo Messi","Leomessi@gmail.com","1234","2295892254");
- # echo InsertarCliente("1","EdwinDeThomas","edwin@gmail.com","1234","2299035433","1");
+#echo InsertarEntrenador("Derian Cardenas","Derian@gmail.com","1234","2299063190");
+ #echo InsertarNutriologo("Leo Messi","Leomessi@gmail.com","1234","2295892254");
+#echo InsertarCliente("1","EdwinDeThomas","edwin@gmail.com","1234","2299035433","1");
  echo InsertarDieta("1","frijoles","2gr","10am","lunes");
 
 ?>
