@@ -17,34 +17,7 @@
 </head>
 <body>
 
-    <!-- MENU BAR -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-
-            <a class="navbar-brand" href="index.php">DUKI GYM</a>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-lg-auto">
-
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">Conocenos</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#class" class="nav-link">Areas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./login.php" class="nav-link">Iniciar sesión</a>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-    </nav>
-
+    <?php include 'navbar.php';?>
      <section class="hero d-flex flex-column justify-content-center align-items-center" id="home">
 
             <div class="bg-overlay"></div>
