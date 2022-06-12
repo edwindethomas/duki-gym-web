@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 
-     <title>Duki Gym Pro</title>
+     <title>DUKI GYM</title>
 
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -21,17 +21,17 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
 
-            <a class="navbar-brand" href="index.php">Duki gym</a>
+            <a class="navbar-brand" href="index.php">DUKI GYM</a>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
 
                     <li class="nav-item">
-                        <a href="#about" class="nav-link">Sobre nosotros</a>
+                        <a href="#about" class="nav-link">Conocenos</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#class" class="nav-link">Clases</a>
+                        <a href="#class" class="nav-link">Areas</a>
                     </li>
                     <li class="nav-item">
                         <a href="#contact" class="nav-link">Contacto</a>
@@ -55,13 +55,14 @@
                          <div class="col-lg-8 col-md-10 mx-auto col-12">
                               <div class="hero-text mt-5 text-center">
 
-                                    <h6>Nueva forma de entrenar en el mejor gimnasio</h6>
+                                    <h6>¡Conviertete en la mejor version de ti!</h6>
 
-                                    <h1 class="text-white">Mantén saludable tu cuerpo</h1>
+                                    <h1 class="text-white">Todo logro comienza con intentarlo</h1>
 
                                     <a href="#feature" class="btn custom-btn mt-3">Empieza hoy</a>
 
-                                    <a href="#about" class="btn custom-btn bordered mt-3">Conócenos</a>
+                                    <a href="#about" class="btn custom-btn bordered mt-3">Saber mas
+                                    </a>
                                    
                               </div>
                          </div>
@@ -76,11 +77,11 @@
             <div class="row">
 
                 <div class="d-flex flex-column justify-content-center ml-lg-auto mr-lg-5 col-lg-5 col-md-6 col-12">
-                    <h2 class="mb-3 text-white">¡Eres nuevo en el gimnasio?</h2>
+                    <h2 class="mb-3 text-white">¡POR TIEMPO LIMITADO!</h2>
 
-                    <h6 class="mb-4 text-white" >Tendrás una membresía de 3 meses gratis, tu 4to mes es gratis</h6>
+                    <h6 class="mb-4 text-white" >Inscribete hoy y recibe los primeros 2 meses gratis</h6>
 
-                    <p class="btn custom-btn bg-color mt-3">Ven y hazte miembro ahora</p>
+                    <p class="btn custom-btn bg-color mt-3">hazte miembro ahora</p>
                 </div>
 
                 <div class="mr-lg-auto mt-3 col-lg-4 col-md-6 col-12">
@@ -109,25 +110,25 @@
                     <div class="row">
 
                             <div class="mt-lg-5 mb-lg-0 mb-4 col-lg-5 col-md-10 mx-auto col-12">
-                                <h2 class="mb-4">Somos Duko gym</h2>
+                                <h2 class="mb-4">SOMOS DUKO GYM</h2>
 
-                                <p>¿Te partieron el corazón? Nosotros te hacemos pasar de Duki a Duko, mejorando tu estilo de vida.
-                                    Conoce a nuestros entrenadores, ellos están dispuestos a ayudar a mejorar tu salud.
-                                </p>
+                                <p class="text-justify">Somos un gimnasio comprometido en el cuidado de la salud y fortalecimiento 
+                                    físico de nuestros clientes y eso lo comprobamos equipando mas de 812m2 con 
+                                    aparatos e instalaciones de la mejor calidad.</p>
 
-                                <p>Si tienes dudas sobre Duki gym no dudes es contactarnos, nosotros te responderemos de la mejor manera y estaremos
-                                    dispuestos a ayudarte en lo que necesites.
+                                <p class="text-justify">Te damos el método completo. No es solo entrenamiento, lo sincronizamos con 
+                                    una nutrición adecuada para garantizar los resultados
                                 </p>
 
                             </div>
 
                             <div class="ml-lg-auto col-lg-3 col-md-6 col-12">
                                 <div class="team-thumb">
-                                    <img src="images/team/team-image.jpg" class="img-fluid" alt="Trainer">
+                                    <img src="images/cristientre.jpg" class="img-fluid" alt="Trainer">
 
                                     <div class="team-info d-flex flex-column">
 
-                                        <h3>Cristiano R.</h3>
+                                        <h3>Cristiano R</h3>
                                         <span>Entrenador</span>
 
                                         <ul class="social-icon mt-3">
@@ -139,11 +140,11 @@
 
                             <div class="mr-lg-auto mt-5 mt-lg-0 mt-md-0 col-lg-3 col-md-6 col-12">
                                 <div class="team-thumb">
-                                    <img src="images/team/team-image01.jpg" class="img-fluid" alt="Trainer">
+                                    <img src="images/benzenutri.jpg" class="img-fluid" alt="Trainer">
 
                                     <div class="team-info d-flex flex-column">
 
-                                        <h3>Leo Messi</h3>
+                                        <h3>K Benzema</h3>
                                         <span>Nutriólogo</span>
 
                                         <ul class="social-icon mt-3">
@@ -164,29 +165,29 @@
                     <div class="row">
 
                             <div class="col-lg-12 col-12 text-center mb-5">
-                                <h6>Consigue tu figura deseada</h6>
+                                <h6>¡Conoce todas las areas con las que contamos!</h6>
 
-                                <h2>Nuestras areas</h2>
+                                <h2>Areas Integradas</h2>
                              </div>
 
                             <div class="col-lg-4 col-md-6 col-12">
                                 <div class="class-thumb">
-                                    <img src="images/class/yoga-class.jpg" class="img-fluid" alt="Class">
+                                    <img src="images/messicardio.jpg" class="img-fluid" alt="Class">
 
                                     <div class="class-info">
                                         <h3 class="text-center">Pesas</h3>
-                                        <p class="text-justify">Contamos con area de pesas que te ayudarán a hacer crecer tus músculos.</p>
+                                        <p class="text-justify">Contamos con area de pesas que te ayudarán crecer tus músculos.</p>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12">
                                 <div class="class-thumb">
-                                    <img src="images/class/crossfit-class.jpg" class="img-fluid" alt="Class">
+                                    <img src="images/messimaquina.jpg" class="img-fluid" alt="Class">
 
                                     <div class="class-info">
                                         <h3 class="text-center">Maquinas</h3>
-                                        <p class="text-justify">Al igual que las pesas te ayudará a hacer ganar resistencia y a quemar calorías.
+                                        <p class="text-justify">Las maquinas te ayudaran a ganar resistencia y a quemar calorías.
                                         </p>
                                     </div>
                                 </div>
@@ -194,10 +195,10 @@
 
                             <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12">
                                 <div class="class-thumb">
-                                    <img src="images/class/cardio-class.jpg" class="img-fluid" alt="Class">
+                                    <img src="images/messipesas.jpg" class="img-fluid" alt="Class">
                                     <div class="class-info">
                                         <h3 class="text-center">Cardio</h3>
-                                        <p>Con el cardio ganaras una gran resistencia y adelgazaras de una forma rápida.</p>
+                                        <p>Con el cardio ganaras una gran resistencia y adelgazaras.</p>
                                     </div>
                                 </div>
                             </div>
