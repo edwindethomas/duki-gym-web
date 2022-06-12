@@ -91,5 +91,9 @@
   # echo InsertarDieta("3","frijoles","2gr","10am","lunes");
   #  echo InsertarRutina("3","pesa","4x4","10kg","lunes");
   echo InsertarMembresia("3","9 junio","activo","bancomer","300.00");
+#echo InsertarEntrenador("Derian Cardenas","Derian@gmail.com","1234","2299063190");
+ #echo InsertarNutriologo("Leo Messi","Leomessi@gmail.com","1234","2295892254");
+#echo InsertarCliente("1","EdwinDeThomas","edwin@gmail.com","1234","2299035433","1");
+ echo InsertarDieta("1","frijoles","2gr","10am","lunes");
 
 ?>
