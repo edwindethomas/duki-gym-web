@@ -1,4 +1,9 @@
 <?php
+session_start();
+#if(!isset($_SESSION['LogueadoN'])){
+#    header("Location: ./login.php");
+#}
+
 require_once "./conexion.php";
 
 function InsertarEntrenador($nombrecompleto, $usuario, $password, $telefono)
@@ -194,9 +199,9 @@ function SeleccionarUsuario($usuario,$password)
 
             $_SESSION['UserName'] = $Row['nombrecompleto'];
             $_SESSION['UserId'] = $Row['usuario'];
-            $_SESSION['Logueado'] = true;
+            $_SESSION['LogueadoE'] = true;
 
-            header("Location: ../indexentrenador.php");
+          header("Location: ./indexentrenador.php");
 
         }
         $SqlSeleccionar = "SELECT * FROM nutriologo WHERE nutriologo.usuario='$usuario' AND nutriologo.password='$password'";
@@ -209,9 +214,9 @@ function SeleccionarUsuario($usuario,$password)
             
             $_SESSION['UserName'] = $Row['nombrecompleto'];
             $_SESSION['UserId'] = $Row['usuario'];
-            $_SESSION['Logueado'] = true;
+            $_SESSION['LogueadoN'] = true;
 
-            header("Location: ../indexnutriologo.php");
+            header("Location: ../indexnutricionista.php");
         }
         $SqlSeleccionar = "SELECT * FROM cliente WHERE cliente.usuario='$usuario' AND cliente.password='$password'";
         $UsuarioSelect = $cn->query($SqlSeleccionar);
@@ -223,9 +228,9 @@ function SeleccionarUsuario($usuario,$password)
             
             $_SESSION['UserName'] = $Row['nombrecompleto'];
             $_SESSION['UserId'] = $Row['usuario'];
-            $_SESSION['Logueado'] = true;
+            $_SESSION['LogueadoC'] = true;
 
-            header("Location: ../indexcliente.php");
+            header("Location: ./indexcliente.php");
         }
         return "CREDENCIALES DE USUARIO INEXISTENTES, VUELVA A INTENTARLO";
     }catch (Exception $e){
@@ -240,4 +245,4 @@ function SeleccionarUsuario($usuario,$password)
 #echo InsertarMembresia("1", "9 junio", "activo", "bancomer", "300.00");
 #echo InsertarSalud("1","89.9","170.9","28.0");
 #echo BorrarRutina("2");
-echo SeleccionarUsuario("Derian@gmail.com","1234");
+echo SeleccionarUsuario("Leomessi@gmail.com","1234");
