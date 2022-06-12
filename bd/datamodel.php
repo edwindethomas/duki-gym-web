@@ -1,5 +1,5 @@
 <?php
-require_once "../bd/conexion.php";
+require_once "./conexion.php";
 
 function InsertarEntrenador($nombrecompleto, $usuario, $password, $telefono)
 {
@@ -192,8 +192,9 @@ function SeleccionarUsuario($usuario,$password)
             $Mensaje = "Prueba Usuario".$Row['nombrecompleto']." ".$Row['usuario']." ".$Row['password'];
             $array = implode(" ",$Row);
 
-            $_SESSION['UserName'] = "Bienvenido".$Row['NombreAlumno']." ".$Row['ApellidoAlumno'];
-            $_SESSION['UserId'] = 
+            $_SESSION['UserName'] = $Row['nombrecompleto'];
+            $_SESSION['UserId'] = $Row['usuario'];
+            $_SESSION['Logueado'] = true;
 
             header("Location: ../indexentrenador.php");
 
@@ -204,6 +205,12 @@ function SeleccionarUsuario($usuario,$password)
             $Row = $UsuarioSelect -> fetch_assoc();
             $Mensaje = "Prueba Usuario".$Row['nombrecompleto']." ".$Row['usuario']." ".$Row['password'];
             $array = implode(" ",$Row);
+
+            
+            $_SESSION['UserName'] = $Row['nombrecompleto'];
+            $_SESSION['UserId'] = $Row['usuario'];
+            $_SESSION['Logueado'] = true;
+
             header("Location: ../indexnutriologo.php");
         }
         $SqlSeleccionar = "SELECT * FROM cliente WHERE cliente.usuario='$usuario' AND cliente.password='$password'";
@@ -212,6 +219,12 @@ function SeleccionarUsuario($usuario,$password)
             $Row = $UsuarioSelect -> fetch_assoc();
             $Mensaje = "Prueba Usuario".$Row['nombrecompleto']." ".$Row['usuario']." ".$Row['password'];
             $array = implode(" ",$Row);
+
+            
+            $_SESSION['UserName'] = $Row['nombrecompleto'];
+            $_SESSION['UserId'] = $Row['usuario'];
+            $_SESSION['Logueado'] = true;
+
             header("Location: ../indexcliente.php");
         }
         return "CREDENCIALES DE USUARIO INEXISTENTES, VUELVA A INTENTARLO";
