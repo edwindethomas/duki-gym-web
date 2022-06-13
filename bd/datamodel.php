@@ -201,7 +201,7 @@ function SeleccionarUsuario($usuario,$password)
             $_SESSION['UserId'] = $Row['usuario'];
             $_SESSION['LogueadoE'] = true;
 
-          header("Location: ./indexentrenador.php");
+          header("Location: ../indexentrenador.php");
 
         }
         $SqlSeleccionar = "SELECT * FROM nutriologo WHERE nutriologo.usuario='$usuario' AND nutriologo.password='$password'";
@@ -230,7 +230,7 @@ function SeleccionarUsuario($usuario,$password)
             $_SESSION['UserId'] = $Row['usuario'];
             $_SESSION['LogueadoC'] = true;
 
-            header("Location: ./indexcliente.php");
+            header("Location: ../indexcliente.php");
         }
         return "CREDENCIALES DE USUARIO INEXISTENTES, VUELVA A INTENTARLO";
     }catch (Exception $e){
@@ -245,4 +245,4 @@ function SeleccionarUsuario($usuario,$password)
 #echo InsertarMembresia("1", "9 junio", "activo", "bancomer", "300.00");
 #echo InsertarSalud("1","89.9","170.9","28.0");
 #echo BorrarRutina("2");
-echo SeleccionarUsuario("Leomessi@gmail.com","1234");
+#echo SeleccionarUsuario("Leomessi@gmail.com","1234");

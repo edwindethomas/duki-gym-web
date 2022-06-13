@@ -1,52 +1,65 @@
-<!DOCTYPE html>
-<html lang="es">
+<?php
+session_start();
+require_once "./bd/conexion.php";
+require_once "./loginvista.php";
 
-<head>
+if(isset($_POST['btnLogin'])){
 
-    <title>Duki Gym Pro</title>
+    $usuario = $_POST['usuario'];
+    $password = $_POST['password'];
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="description" content="Gimnasio de duki para ponerte astral">
-    <meta name="author" content="Iván y Edwin desarrolladores web fullstack">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        try {
+            $cn = conexion();
+            $SqlSeleccionar = "SELECT * FROM entrenador WHERE entrenador.usuario='$usuario' AND entrenador.password='$password'";
+            $UsuarioSelect = $cn->query($SqlSeleccionar);
+            
+            if($UsuarioSelect->num_rows > 0) {
+                $Row = $UsuarioSelect -> fetch_assoc();
+                $Mensaje = "Prueba Usuario".$Row['nombrecompleto']." ".$Row['usuario']." ".$Row['password'];
+                $array = implode(" ",$Row);
+    
+                $_SESSION['UserName'] = $Row['nombrecompleto'];
+                $_SESSION['UserId'] = $Row['usuario'];
+                $_SESSION['LogueadoE'] = true;
+    
+              header("Location: ./indexentrenador.php");
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/estilos.css">
+            }
+            $SqlSeleccionar = "SELECT * FROM nutriologo WHERE nutriologo.usuario='$usuario' AND nutriologo.password='$password'";
+            $UsuarioSelect = $cn->query($SqlSeleccionar);
+            if($UsuarioSelect->num_rows > 0) {
+                $Row = $UsuarioSelect -> fetch_assoc();
+                $Mensaje = "Prueba Usuario".$Row['nombrecompleto']." ".$Row['usuario']." ".$Row['password'];
+                $array = implode(" ",$Row);
+    
+                
+                $_SESSION['UserName'] = $Row['nombrecompleto'];
+                $_SESSION['UserId'] = $Row['usuario'];
+                $_SESSION['LogueadoN'] = true;
+    
+                header("Location: ./indexnutricionista.php");
+            }
+            $SqlSeleccionar = "SELECT * FROM cliente WHERE cliente.usuario='$usuario' AND cliente.password='$password'";
+            $UsuarioSelect = $cn->query($SqlSeleccionar);
+            if($UsuarioSelect->num_rows > 0) {
+                $Row = $UsuarioSelect -> fetch_assoc();
+                $Mensaje = "Prueba Usuario".$Row['nombrecompleto']." ".$Row['usuario']." ".$Row['password'];
+                $array = implode(" ",$Row);
+    
+                
+                $_SESSION['UserName'] = $Row['nombrecompleto'];
+                $_SESSION['UserId'] = $Row['usuario'];
+                $_SESSION['LogueadoC'] = true;
+    
+                header("Location: ./indexcliente.php");
+            }
+            return "CREDENCIALES DE USUARIO INEXISTENTES, VUELVA A INTENTARLO";
+        }catch (Exception $e){
+            return $e;
+        }
+    
 
-</head>
-
-<body>
-    <?php include 'navbar.php';?>
-    <section class="d-flex flex-column justify-content-center align-items-center" id="home">
+}
 
 
-
-        <div class="sidenav">
-            <div class="login-main-text">
-                <div>
-                    ¡CONVIÉRTETE EN UNA MEJOR VERSION DE TI!
-                </div>
-            </div>
-        </div>
-        <div class="main">
-            <h1 class="inicio__sesion text-center">Iniciar sesión en Duki gym</h1>
-            <div class="login-form">
-                <form>
-                    <div class="form-group">
-                        <label>Correo electrónico</label>
-                        <input type="text" class="form-control" placeholder="Correo electrónico">
-                    </div>
-                    <div class="form-group">
-                        <label>Contraseña</label>
-                        <input type="password" class="form-control" placeholder="Contraseña">
-                    </div>
-                    <button type="submit" class="btn btn-black">Iniciar sesión</button>
-                </form>
-            </div>
-        </div>
-    </section>
-</body>
-
-</html>
+?>

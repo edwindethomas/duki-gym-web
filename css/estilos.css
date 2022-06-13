@@ -642,14 +642,14 @@
         margin-top: 20%;
     }
     .inicio__sesion{
-      font-size: 52px;
+      font-size: 50px;
       margin-bottom: 5rem;
     }
 }
 
 
 .login-main-text{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../images/cristiano_ronaldo.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../images/Ronaldo.png);
     background-size: cover;
     width: 100%;
     height: 100%;
