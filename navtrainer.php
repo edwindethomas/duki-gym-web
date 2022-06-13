@@ -10,7 +10,7 @@
                         <a href="./indexentrenador.php#viewclients" class="nav-link">Ver clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a href="./indexentrenador.php#createclient" class="nav-link">Agregar cliente</a>
+                        <a href="./agregarcliente.php" class="nav-link">Agregar cliente</a>
                     </li>
                     <li class="nav-item">
                         <a href="./indexentrenador.php#createroutine" class="nav-link">Agregar rutina</a>

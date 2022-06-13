@@ -1,6 +1,17 @@
-<?php 
-    if(!isset($_GET["id"])) exit();
-    $id = $_GET["id"];
-    include './bd/selects.php';
-    $resultado = eliminar_cliente($id);
+<?php
+
+require_once "./bd/conexion.php";
+include 'indexentrenador.php';
+
+    $id = $cliente[0][0];
+
+    try {
+        $cn = conexion();
+        $sqlDelete = "DELETE FROM cliente WHERE id='$id'";
+        $UsuarioDelete = $cn->query($sqlDelete);
+
+       header("Location: ./indexentrenador.php");
+    } catch (Exception $e) {
+        echo ("$e");
+    }
 ?>

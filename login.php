@@ -20,6 +20,7 @@ if(isset($_POST['btnLogin'])){
     
                 $_SESSION['UserName'] = $Row['nombrecompleto'];
                 $_SESSION['UserId'] = $Row['usuario'];
+                $_SESSION['Id'] = $Row['id']; 
                 $_SESSION['LogueadoE'] = true;
     
               header("Location: ./indexentrenador.php");
@@ -35,6 +36,7 @@ if(isset($_POST['btnLogin'])){
                 
                 $_SESSION['UserName'] = $Row['nombrecompleto'];
                 $_SESSION['UserId'] = $Row['usuario'];
+                $_SESSION['Id'] = $Row['id'];
                 $_SESSION['LogueadoN'] = true;
     
                 header("Location: ./indexnutricionista.php");
@@ -49,6 +51,7 @@ if(isset($_POST['btnLogin'])){
                 
                 $_SESSION['UserName'] = $Row['nombrecompleto'];
                 $_SESSION['UserId'] = $Row['usuario'];
+                $_SESSION['Id'] = $Row['id'];
                 $_SESSION['LogueadoC'] = true;
     
                 header("Location: ./indexcliente.php");

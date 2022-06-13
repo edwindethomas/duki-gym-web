@@ -96,5 +96,5 @@ function eliminar_cliente($id)
 }
 
 #echo update_cliente_id("1","Edwin De Thomas Luna","edwin@hotmail.com","1234","1","2292193329");
-echo eliminar_cliente("2");
+#echo eliminar_cliente("2");
 ?>

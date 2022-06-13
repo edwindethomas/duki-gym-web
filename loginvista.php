@@ -36,7 +36,7 @@
                 <form method="post">
                     <div class="form-group">
                         <label>Correo electrónico</label>
-                        <input type="text"name="usuario"; class="form-control" placeholder="Correo electrónico">
+                        <input type="text"name="usuario" class="form-control" placeholder="Correo electrónico">
                     </div>
                     <div class="form-group">
                         <label>Contraseña</label>
