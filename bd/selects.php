@@ -66,9 +66,35 @@ function select_cliente_id($id){
         $clienteSelect = $cn->query($sqlSelect);
         $cliente = $clienteSelect->fetch_all();
         return $cliente;
-    } catch (\Throwable $th) {
-        //throw $th;
+    } catch (Exception $e) {
+        return 0;
+    }
+}
+function update_cliente_id($id,$nombrecompleto,$usuario,$password,$status,$telefono)
+{
+    try {
+        $cn = conexion();
+        $sqlUpdate="UPDATE cliente SET nombrecompleto = ?, usuario = ?, password = ?, status = ?, telefono = ?   WHERE id = ?;";
+        $clientUpdate = $cn->prepare($sqlUpdate);
+        $resultado = $clientUpdate->execute([$nombrecompleto,$usuario,$password,$status,$telefono,$id]);
+        return $resultado;
+    } catch (Exception $e) {
+        return 0;
     }
 }
 
+function eliminar_cliente($id)
+{
+    try{
+        $cn = conexion();
+        $sqlDelete = "DELETE FROM cliente WHERE id='$id'";
+        $resultado = $cn->query($sqlDelete);
+        return $resultado;
+    } catch (Exception $e) {
+       return $e;
+    }
+}
+
+#echo update_cliente_id("1","Edwin De Thomas Luna","edwin@hotmail.com","1234","1","2292193329");
+echo eliminar_cliente("2");
 ?>
