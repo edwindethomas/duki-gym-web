@@ -32,7 +32,7 @@
 
                                     <h1 class="text-white">Todo logro comienza con intentarlo</h1>
 
-                                    <a href="#feature" class="btn custom-btn mt-3">Empieza hoy</a>
+                                    <a href="./login.php" class="btn custom-btn mt-3">Empieza hoy</a>
 
                                     <a href="#about" class="btn custom-btn bordered mt-3">Saber mas
                                     </a>
@@ -54,7 +54,7 @@
 
                     <h6 class="mb-4 text-white" >Inscribete hoy y recibe los primeros 2 meses gratis</h6>
 
-                    <p class="btn custom-btn bg-color mt-3">hazte miembro ahora</p>
+                    <a href="./login.php" class="btn custom-btn bg-color mt-3">hazte miembro ahora</a>
                 </div>
 
                 <div class="mr-lg-auto mt-3 col-lg-4 col-md-6 col-12">
@@ -97,11 +97,11 @@
 
                             <div class="ml-lg-auto col-lg-3 col-md-6 col-12">
                                 <div class="team-thumb">
-                                    <img src="images/cristientre.jpg" class="img-fluid" alt="Trainer">
+                                    <img src="images/hombrefit.jpg" class="img-fluid" alt="Trainer">
 
                                     <div class="team-info d-flex flex-column">
 
-                                        <h3>Cristiano R</h3>
+                                        <h3>Ivan Agame</h3>
                                         <span>Entrenador</span>
 
                                         <ul class="social-icon mt-3">
@@ -113,11 +113,11 @@
 
                             <div class="mr-lg-auto mt-5 mt-lg-0 mt-md-0 col-lg-3 col-md-6 col-12">
                                 <div class="team-thumb">
-                                    <img src="images/benzenutri.jpg" class="img-fluid" alt="Trainer">
+                                    <img src="images/mujerfit.jpg" class="img-fluid" alt="Trainer">
 
                                     <div class="team-info d-flex flex-column">
 
-                                        <h3>K Benzema</h3>
+                                        <h3>Antonella R</h3>
                                         <span>Nutriólogo</span>
 
                                         <ul class="social-icon mt-3">
@@ -145,7 +145,7 @@
 
                             <div class="col-lg-4 col-md-6 col-12">
                                 <div class="class-thumb">
-                                    <img src="images/messicardio.jpg" class="img-fluid" alt="Class">
+                                    <img src="images/eje1.jpg" class="img-fluid" alt="Class">
 
                                     <div class="class-info">
                                         <h3 class="text-center">Pesas</h3>
@@ -156,7 +156,7 @@
 
                             <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12">
                                 <div class="class-thumb">
-                                    <img src="images/messimaquina.jpg" class="img-fluid" alt="Class">
+                                    <img src="images/eje3.jpg" class="img-fluid" alt="Class">
 
                                     <div class="class-info">
                                         <h3 class="text-center">Maquinas</h3>
@@ -168,7 +168,7 @@
 
                             <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12">
                                 <div class="class-thumb">
-                                    <img src="images/messipesas.jpg" class="img-fluid" alt="Class">
+                                    <img src="images/eje2.jpg" class="img-fluid" alt="Class">
                                     <div class="class-info">
                                         <h3 class="text-center">Cardio</h3>
                                         <p>Con el cardio ganaras una gran resistencia y adelgazaras.</p>
@@ -179,38 +179,6 @@
                     </div>
                </div>
      </section>
-     <section class="contact section" id="contact">
-          <div class="container">
-               <div class="row">
-
-                    <div class="ml-auto col-lg-5 col-md-6 col-12">
-                        <h2 class="mb-4 pb-2">Siéntete libre de preguntar cualquier duda</h2>
-
-                        <form action="#" method="post" class="contact-form webform">
-                            <input type="text" class="form-control" name="cf-name" placeholder="Nombre">
-
-                            <input type="email" class="form-control" name="cf-email" placeholder="Correo electrónico">
-
-                            <textarea class="form-control" rows="5" name="cf-message" placeholder="Mensaje" row="5" style="resize: none;"></textarea>
-
-                            <button type="submit" class="form-control" id="submit-button" name="submit">Enviar</button>
-                        </form>
-                    </div>
-
-                    <div class="mx-auto mt-4 mt-lg-0 mt-md-0 col-lg-5 col-md-6 col-12">
-                        <h2 class="mb-4">Nos puedes encontrar en</h2>
-
-                        <p><i class="fa fa-map-marker mr-1"></i>Av. San, Dr. Rafael Cuervo X 1150, 91855 Veracruz, Ver</p>
-                        <div class="google-map">
-                           <iframe src="https://maps.google.com/maps?q=Av.%20San,%20Dr.%20Rafael%20Cuervo%20X%201150,%2091855%20Veracruz,%20Ve+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="1920" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                        </div>
-                    </div>
-                    
-               </div>
-          </div>
-     </section>
-
-
      <!-- FOOTER -->
      <footer class="site-footer">
           <div class="container">

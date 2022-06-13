@@ -14,9 +14,6 @@
                         <a href="./index.php#class" class="nav-link">Areas</a>
                     </li>
                     <li class="nav-item">
-                        <a href="./index.php#contact" class="nav-link">Contacto</a>
-                    </li>
-                    <li class="nav-item">
                         <a href="./login.php" class="nav-link">Iniciar sesión</a>
                     </li>
                 </ul>
