@@ -11,6 +11,7 @@ $entrenador = $_SESSION['Id'];
      <link rel="stylesheet" href="css/font-awesome.min.css">
      <link rel="stylesheet" href="css/estilos.css">
      <link rel="stylesheet" href="css/entrenador.css">
+     <link rel="stylesheet" href="css/clientevista.css">
 </head>
 <body>
     <?php include './navtrainer.php';?>
@@ -19,27 +20,27 @@ $entrenador = $_SESSION['Id'];
             <div class="col-md-12">
     <form method="POST">
     <div class="form-group">
-        <label for="nombre">Id:</label>
+        <label for="nombre" class="cliente-vista__label">Id:</label>
         <input value="<?php echo $entrenador ?>" name="id" required type="text" id="id" class="form-control" disabled>
     </div>
     <div class="form-group">
-        <label for="nombre">Nombre:</label>
+        <label for="nombre" class="cliente-vista__label">Nombre:</label>
         <input value="" name="nombrecompleto" required type="text" id="nombrecompleto" class="form-control">
     </div>
     <div class="form-group">
-        <label for="nombre">Usuario:</label>
+        <label for="nombre" class="cliente-vista__label">Usuario:</label>
         <input value="" name="usuario" required type="email" id="usuario" class="form-control">
     </div>
     <div class="form-group">
-        <label for="nombre">Contraseña:</label>
+        <label for="nombre" class="cliente-vista__label">Contraseña:</label>
         <input value="" name="password" required type="password" id="password" class="form-control">
     </div>
     <div class="form-group">
-        <label for="nombre">Telefono:</label>
+        <label for="nombre" class="cliente-vista__label">Telefono:</label>
         <input value="" name="telefono" required type="text" id="telefono" class="form-control">
     </div>
     <div class="form-group">
-        <label for="nombre">Nutriologo:</label>
+        <label for="nombre" class="cliente-vista__label">Nutriologo:</label>
         <input value="" name="nutriologoid" required type="number" min="0" max="1" id="nutriologoid" class="form-control">
     </div>
     <button type="submit" class="btn btn-black" name="btnAgregarCliente">Agregar Cliente</button>
