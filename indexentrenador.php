@@ -40,8 +40,8 @@ $clientes = select_clientes_entrenador($entrenadorid);
                             <th>Status</th>
                             <th>Telefono</th>
                             <th>Id nutriologo</th>
-                            <th>Borrar</th>
                             <th>Actualizar</th>
+                            <th>Eliminar</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -56,7 +56,7 @@ $clientes = select_clientes_entrenador($entrenadorid);
                             <td><?php echo $cliente[4] ?></td>
                             <td><?php echo $cliente[5] ?></td>
                             <td><?php echo '<a href="editarcliente.php?id='.$cliente[0].'" class="btn btn-primary" >Editar</a>'?></td>
-                            <td><?php echo '<a href="eliminarcliente.php?id='.$cliente[0].'" class="btn btn-danger" >Eliminar</a>'?></td>
+                            <td><?php echo '<a href="eliminarcliente.php?id='.$cliente[0].'" class="btn btn-danger" >Borrar</a>'?></td>
                         </tr>
                         <?php
                            }
