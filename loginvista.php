@@ -42,7 +42,7 @@
                         <label>Contraseña</label>
                         <input type="password" name="password" class="form-control" placeholder="Contraseña">
                     </div>
-                    <button type="submit" class="btn btn-black" name="btnLogin">Iniciar sesión</button>
+                    <button type="submit" class="btn btn-black mt-2 float-right" name="btnLogin">Iniciar sesión</button>
                 </form>
             </div>
         </div>

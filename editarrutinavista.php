@@ -17,6 +17,8 @@ $rutinas = select_ejercicio_rutina($id);
      <link rel="stylesheet" href="css/font-awesome.min.css">
      <link rel="stylesheet" href="css/estilos.css">
      <link rel="stylesheet" href="css/entrenador.css">
+     <link rel="stylesheet" href="css/clientevista.css">
+
 </head>
 <body>
     <?php include './navtrainer.php';?>
@@ -24,26 +26,28 @@ $rutinas = select_ejercicio_rutina($id);
         <div class="row">
             <div class="col-md-12">
     <form method="POST">
-
+    <div class="form-group">
+    <h2 class="mt-2" id="viewclients">Actualizar rutina</h2>
+    </div>
         <div class="form-group">
-        <label for="nombre">Id:</label>
+        <label for="nombre" class="cliente-vista__label">Id:</label>
         <input value="<?php echo $rutinas[0][0] ?>" name="id" required type="text" id="id" class="form-control" disabled>
     </div>
 
     <div class="form-group">
-        <label for="nombre">Ejercicio:</label>
+        <label for="nombre" class="cliente-vista__label">Ejercicio:</label>
         <input value="<?php echo $rutinas[0][2] ?>" name="ejercicio" required type="text" id="ejercicio" class="form-control">
     </div>
     <div class="form-group">
-        <label for="nombre">Repeticiones:</label>
+        <label for="nombre" class="cliente-vista__label">Repeticiones:</label>
         <input value="<?php echo $rutinas[0][3] ?>" name="repeticiones" required type="text" id="repeticiones" class="form-control">
     </div>
     <div class="form-group">
-        <label for="nombre">Peso: </label>
+        <label for="nombre" class="cliente-vista__label">Peso: </label>
         <input value="<?php echo $rutinas[0][4] ?>" name="peso" required type="text" id="peso" class="form-control">
     </div>
     <div class="form-group">
-        <label for="nombre">Dia:</label>
+        <label for="nombre" class="cliente-vista__label">Dia:</label>
         <input value="<?php echo $rutinas[0][5] ?>" name="dia" required type="text" id="dia" class="form-control">
     </div>
     <button type="submit" class="btn btn-black" name="btnEditarRutina">Guardar Cambios</button>

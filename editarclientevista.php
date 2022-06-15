@@ -11,8 +11,6 @@ if($cliente === FALSE){
 	echo "¡No existe alguna persona con ese ID!";
 	exit();
 }
-
-print_r($cliente);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -23,6 +21,7 @@ print_r($cliente);
      <link rel="stylesheet" href="css/font-awesome.min.css">
      <link rel="stylesheet" href="css/estilos.css">
      <link rel="stylesheet" href="css/entrenador.css">
+     <link rel="stylesheet" href="css/clientevista.css">
 </head>
 <body>
     <?php include './navtrainer.php';?>
@@ -30,30 +29,32 @@ print_r($cliente);
         <div class="row">
             <div class="col-md-12">
     <form method="POST">
-    
+    <div class="form-group">
+    <h2 class="mt-2" id="viewclients">Actualizar cliente</h2>
+    </div>
         <div class="form-group">
-        <label for="nombre">Id:</label>
+        <label for="nombre" class="cliente-vista__label">Id:</label>
         <input value="<?php echo $cliente[0][0] ?>" name="id" required type="text" id="id" class="form-control" disabled>
     </div>
 
     <div class="form-group">
-        <label for="nombre">Nombre:</label>
+        <label for="nombre" class="cliente-vista__label">Nombre:</label>
         <input value="<?php echo $cliente[0][2] ?>" name="nombrecompleto" required type="text" id="nombrecompleto" class="form-control">
     </div>
     <div class="form-group">
-        <label for="nombre">Usuario:</label>
+        <label for="nombre" class="cliente-vista__label">Usuario:</label>
         <input value="<?php echo $cliente[0][3] ?>" name="usuario" required type="email" id="usuario" class="form-control">
     </div>
     <div class="form-group">
-        <label for="nombre">Contraseña:</label>
+        <label for="nombre" class="cliente-vista__label">Contraseña:</label>
         <input value="<?php echo $cliente[0][4] ?>" name="password" required type="password" id="password" class="form-control">
     </div>
     <div class="form-group">
-        <label for="nombre">Status:</label>
+        <label for="nombre" class="cliente-vista__label">Status:</label>
         <input value="<?php echo $cliente[0][5] ?>" name="status" required type="number" min="0" max="1" id="status" class="form-control">
     </div>
     <div class="form-group">
-        <label for="nombre">Telefono:</label>
+        <label for="nombre" class="cliente-vista__label">Telefono:</label>
         <input value="<?php echo $cliente[0][6] ?>" name="telefono" required type="text" id="telefono" class="form-control">
     </div>
     <button type="submit" class="btn btn-black" name="btnEditar">Guardar Cambios</button>

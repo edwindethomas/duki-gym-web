@@ -54,7 +54,7 @@ $clientes = select_clientes_entrenador($entrenadorid);
                             <td><?php echo $cliente[3] ?></td>
                             <td><?php echo $cliente[4] ?></td>
                             <td><?php echo $cliente[5] ?></td>
-                            <td><?php echo '<a href="verrutina.php?id='.$cliente[0].'" class="btn btn-primary" >Ver</a>'?></td>
+                            <td><?php echo '<a href="verrutina.php?id='.$cliente[0].'" class="btn btn-success" >Ver</a>'?></td>
                         </tr>
                         <?php
                            }
