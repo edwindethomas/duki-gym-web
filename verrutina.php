@@ -3,6 +3,7 @@ include 'bd/selects.php';
 
 $clienteid = $_GET["id"];
 $rutinas = select_rutina_cliente($clienteid);
+$nombre = select_cliente_id($clienteid);
 ?>
 
 
@@ -23,7 +24,7 @@ $rutinas = select_rutina_cliente($clienteid);
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="entrenador__titulo" id="viewclients">Rutina de Ivan</h2>
+                <h2 class="entrenador__titulo mb-4" id="viewclients">Rutina de <?php echo $nombre[0][2] ?></h2>
                 <table class="table">
                     <thead>
                         <tr>
