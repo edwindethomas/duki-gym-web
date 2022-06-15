@@ -3,7 +3,7 @@
 require_once "./bd/conexion.php";
 include 'indexentrenador.php';
 
-    $id = $cliente[0][0];
+    $id = $_GET["id"];;
 
     try {
         $cn = conexion();

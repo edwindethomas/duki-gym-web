@@ -45,6 +45,36 @@ function select_clientes_entrenador($entrenadorid)
     }
     
 }
+
+function select_rutina_cliente($clienteid)
+{
+    try {
+        $cn = conexion();
+        $sqlSelect = "SELECT * FROM rutina WHERE rutina.clienteid = '$clienteid'";
+        $rutinaSelect = $cn->query($sqlSelect);
+        $rutina = $rutinaSelect->fetch_all();
+        return $rutina;
+    } catch (Exception $e) {
+        return 0;
+    }
+    
+}
+
+
+function select_ejercicio_rutina($id)
+{
+    try {
+        $cn = conexion();
+        $sqlSelect = "SELECT * FROM rutina WHERE rutina.id = '$id'";
+        $rutinaSelect = $cn->query($sqlSelect);
+        $rutina = $rutinaSelect->fetch_all();
+        return $rutina;
+    } catch (Exception $e) {
+        return 0;
+    }
+    
+}
+
 function select_clientes_nutriologo($nutriologoid)
 {
     try {

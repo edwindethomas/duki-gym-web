@@ -13,7 +13,7 @@
                         <a href="./agregarcliente.php" class="nav-link">Agregar cliente</a>
                     </li>
                     <li class="nav-item">
-                        <a href="./indexentrenador.php#createroutine" class="nav-link">Administrar rutinas</a>
+                        <a href="./administrarrutina.php" class="nav-link">Administrar rutinas</a>
                     </li>
                     <li class="nav-item">
                         <a href="./logout.php" class="nav-link">Cerrar Sesion</a>

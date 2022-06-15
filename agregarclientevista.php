@@ -20,7 +20,10 @@ $entrenador = $_SESSION['Id'];
             <div class="col-md-12">
     <form method="POST">
     <div class="form-group">
-        <label for="nombre" class="cliente-vista__label">Id:</label>
+    <h2 class="entrenador__titulo" id="viewclients">Agregar Cliente</h2>
+    </div>
+    <div class="form-group">
+        <label for="nombre" class="cliente-vista__label">Entrenador ID:</label>
         <input value="<?php echo $entrenador ?>" name="id" required type="text" id="id" class="form-control" disabled>
     </div>
     <div class="form-group">
@@ -40,7 +43,7 @@ $entrenador = $_SESSION['Id'];
         <input value="" name="telefono" required type="text" id="telefono" class="form-control">
     </div>
     <div class="form-group">
-        <label for="nombre" class="cliente-vista__label">Nutriologo:</label>
+        <label for="nombre" class="cliente-vista__label">Nutriologo ID:</label>
         <input value="" name="nutriologoid" required type="number" min="0" max="1" id="nutriologoid" class="form-control">
     </div>
     <button type="submit" class="btn btn-black" name="btnAgregarCliente">Agregar Cliente</button>
