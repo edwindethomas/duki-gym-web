@@ -32,9 +32,9 @@ $nombre = select_cliente_id($clienteid);
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Ejercicio</th>
-                            <th>Repeticiones</th>
-                            <th>Peso</th>
+                            <th>Comida</th>
+                            <th>Porcion</th>
+                            <th>Hora</th>
                             <th>Dia</th>
                         </tr>
                     </thead>
