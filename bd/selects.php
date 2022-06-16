@@ -89,6 +89,8 @@ function select_clientes_nutriologo($nutriologoid)
     
 }
 
+
+
 function select_cliente_id($id){
     try {
         $cn = conexion();
