@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['LogueadoE'])){
+    header("Location: ./login.php");
+}
+$entrenador = $_SESSION['UserId'];
+?>
 <?php 
 include 'bd/selects.php';
 $clienteid = $_GET["id"];
@@ -15,6 +22,7 @@ $rutinas = select_rutina_cliente($clienteid);
      <link rel="stylesheet" href="css/estilos.css">
      <link rel="stylesheet" href="css/entrenador.css">
      <link rel="stylesheet" href="css/clientevista.css">
+     <link rel="shortcut icon" href="images/logodukos.png">
 </head>
 <body>
     <?php include './navtrainer.php';?>
@@ -27,20 +35,29 @@ $rutinas = select_rutina_cliente($clienteid);
     </div>
     <div class="form-group">
         <label for="nombre" class="cliente-vista__label">Ejercicio:</label>
-        <input name="ejercicio" required type="text" id="ejercicio" class="form-control">
+        <input name="ejercicio" pattern="^[A-Z]{1}[a-z ]*$" title="Escribe el ejercicio iniciando con la primer letra mayuscula" placeholder="Ejemplo: Press banca" required type="text" id="ejercicio" class="form-control">
     </div>
     <div class="form-group">
         <label for="nombre" class="cliente-vista__label">Repeticiones:</label>
-        <input value="" name="repeticiones" required type="text" id="repeticiones" class="form-control">
+        <input value="" pattern="^[0-9]{1,2}$" title="Escribe un numero del 1 al 99" name="repeticiones" placeholder="Ejemplo: 5" required type="text" id="repeticiones" class="form-control">
     </div>
     <div class="form-group">
         <label for="nombre" class="cliente-vista__label">Peso:</label>
-        <input value="" name="peso" required type="text" id="peso" class="form-control">
+        <input value="" pattern="^[0-9]{1,3}" title="Escribe un numero entre 1 y 999" name="peso" placeholder="Ejemplo: 10" required type="text" id="peso" class="form-control">
     </div>
     <div class="form-group">
         <label for="nombre" class="cliente-vista__label">Dia:</label>
-        <input value="" name="dia" required type="text" id="dia" class="form-control">
+        <select title="Selecciona un dia de la semana" name="dia" placeholder="Ejemplo: Lunes" required type="text" id="dia" class="form-control">
+        <option value="Lunes" id="dia">Lunes</option>
+        <option value="Martes" id="dia">Martes</option>
+        <option value="Miercoles" id="dia">Miercoles</option>
+        <option value="Jueves" id="dia">Jueves</option>
+        <option value="Viernes" id="dia">Viernes</option>
+        <option value="Sabado" id="dia">Sabado</option>
+        <option value="Domingo" id="dia">Domingo</option>
+        </select>
     </div>
+
     <button type="submit" class="btn btn-black" name="btnAgregarEjercicio">Agregar Ejercicio</button>
 </form>
             </div>

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="shortcut icon" href="images/logodukos.png">
 
 </head>
 
@@ -36,11 +37,11 @@
                 <form method="post">
                     <div class="form-group">
                         <label>Correo electrónico</label>
-                        <input type="text"name="usuario" class="form-control" placeholder="Correo electrónico">
+                        <input name="usuario" class="form-control" placeholder="Ejemplo: example@correo.com" title="Escribe tu correo electronico" required type="email">
                     </div>
                     <div class="form-group">
                         <label>Contraseña</label>
-                        <input type="password" name="password" class="form-control" placeholder="Contraseña">
+                        <input required type="password" name="password" class="form-control" placeholder="Escribe tu contraseña" title="Escribe tu contraseña">
                     </div>
                     <button type="submit" class="btn btn-black mt-2 float-right" name="btnLogin">Iniciar sesión</button>
                 </form>

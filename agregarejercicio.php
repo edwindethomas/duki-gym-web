@@ -9,7 +9,6 @@ if(isset($_POST['btnAgregarEjercicio'])){
     $repeticiones = $_POST['repeticiones'];
     $peso = $_POST['peso'];
     $dia = $_POST['dia'];
-    print_r($rutinas);
     try {
         $cn = conexion();
         $sqlInsert = "INSERT INTO rutina VALUES (NULL,'$clienteid','$ejercicio','$repeticiones','$peso',

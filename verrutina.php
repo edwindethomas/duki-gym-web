@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['LogueadoE'])){
+    header("Location: ./login.php");
+}
+$entrenador = $_SESSION['UserId'];
+?>
 <?php 
 include 'bd/selects.php';
 
@@ -18,6 +25,7 @@ $nombre = select_cliente_id($clienteid);
      <link rel="stylesheet" href="css/font-awesome.min.css">
      <link rel="stylesheet" href="css/estilos.css">
      <link rel="stylesheet" href="css/entrenador.css">
+     <link rel="shortcut icon" href="images/logodukos.png">
 </head>
 <body>
     <?php include 'navtrainer.php' ?>

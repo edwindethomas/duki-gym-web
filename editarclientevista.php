@@ -1,7 +1,11 @@
 <?php
 session_start();
-
-if(!isset($_GET["id"])) exit();
+if(!isset($_SESSION['LogueadoE'])){
+    header("Location: ./login.php");
+}
+$entrenador = $_SESSION['UserId'];
+?>
+<?php
 $id = $_GET["id"];
 include 'bd/selects.php';
 $cliente = select_cliente_id($id);
@@ -22,6 +26,7 @@ if($cliente === FALSE){
      <link rel="stylesheet" href="css/estilos.css">
      <link rel="stylesheet" href="css/entrenador.css">
      <link rel="stylesheet" href="css/clientevista.css">
+     <link rel="shortcut icon" href="images/logodukos.png">
 </head>
 <body>
     <?php include './navtrainer.php';?>
@@ -39,15 +44,15 @@ if($cliente === FALSE){
 
     <div class="form-group">
         <label for="nombre" class="cliente-vista__label">Nombre:</label>
-        <input value="<?php echo $cliente[0][2] ?>" name="nombrecompleto" required type="text" id="nombrecompleto" class="form-control">
+        <input  value="<?php echo $cliente[0][2] ?>" title="Escribe tu nombre completo iniciando con mayuscula cada palabra" placeholder="Ejemplo: Nombre Apellido1 Apellido2" pattern="^[A-Z]{1}[\p{L} \.'\-]+$" name="nombrecompleto" required type="text" id="nombrecompleto" class="form-control">
     </div>
     <div class="form-group">
         <label for="nombre" class="cliente-vista__label">Usuario:</label>
-        <input value="<?php echo $cliente[0][3] ?>" name="usuario" required type="email" id="usuario" class="form-control">
+        <input value="<?php echo $cliente[0][3] ?>" title="Escribe tu correo electronico" placeholder="Ejemplo: example@correo.com" name="usuario" required type="email" id="usuario" class="form-control">
     </div>
     <div class="form-group">
         <label for="nombre" class="cliente-vista__label">Contraseña:</label>
-        <input value="<?php echo $cliente[0][4] ?>" name="password" required type="password" id="password" class="form-control">
+        <input value="<?php echo $cliente[0][4] ?>" title="Escribe tu contraseña" name="password" required type="password" id="password" class="form-control">
     </div>
     <div class="form-group">
         <label for="nombre" class="cliente-vista__label">Status:</label>
@@ -55,7 +60,7 @@ if($cliente === FALSE){
     </div>
     <div class="form-group">
         <label for="nombre" class="cliente-vista__label">Telefono:</label>
-        <input value="<?php echo $cliente[0][6] ?>" name="telefono" required type="text" id="telefono" class="form-control">
+        <input value="<?php echo $cliente[0][6] ?>" title="Escribe tu telefono con 10 digitos" name="telefono" placeholder="Ejemplo: 2299063184" pattern="^[0-9]{10}$" required type="text" id="telefono" class="form-control">
     </div>
     <button type="submit" class="btn btn-black" name="btnEditar">Guardar Cambios</button>
 </form>

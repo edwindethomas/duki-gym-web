@@ -13,7 +13,7 @@
      <link rel="stylesheet" href="css/bootstrap.min.css">
      <link rel="stylesheet" href="css/font-awesome.min.css">
      <link rel="stylesheet" href="css/estilos.css">
-     <link rel="shortcut icon" href="images/logoduko.png">
+     <link rel="shortcut icon" href="images/logodukos.png">
 
 </head>
 <body>
@@ -55,7 +55,7 @@
 
                     <h6 class="mb-4 text-white" >Inscribete hoy y recibe los primeros 2 meses gratis</h6>
 
-                    <a href="./login.php" class="btn custom-btn bg-color mt-3">hazte miembro ahora</a>
+                    <a href="./login.php" class="btn custom-btn bg-color mt-3">Ingresa ahora</a>
                 </div>
 
                 <div class="mr-lg-auto mt-3 col-lg-4 col-md-6 col-12">
@@ -87,7 +87,7 @@
                                 <h2 class="mb-4">SOMOS DUKO GYM</h2>
 
                                 <p class="text-justify">Somos un gimnasio comprometido en el cuidado de la salud y fortalecimiento 
-                                    físico de nuestros clientes y eso lo comprobamos equipando mas de 812m2 con 
+                                    físico de nuestros clientes y eso lo comprobamos equipando mas de 800 tipos de 
                                     aparatos e instalaciones de la mejor calidad.</p>
 
                                 <p class="text-justify">Te damos el método completo. No es solo entrenamiento, lo sincronizamos con 

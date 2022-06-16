@@ -1,7 +1,11 @@
 <?php
 session_start();
+if(!isset($_SESSION['LogueadoE'])){
+    header("Location: ./login.php");
+}
 $entrenador = $_SESSION['Id'];
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,6 +16,7 @@ $entrenador = $_SESSION['Id'];
      <link rel="stylesheet" href="css/estilos.css">
      <link rel="stylesheet" href="css/entrenador.css">
      <link rel="stylesheet" href="css/clientevista.css">
+     <link rel="shortcut icon" href="images/logodukos.png">
 </head>
 <body>
     <?php include './navtrainer.php';?>
@@ -24,27 +29,27 @@ $entrenador = $_SESSION['Id'];
     </div>
     <div class="form-group">
         <label for="nombre" class="cliente-vista__label">Entrenador ID:</label>
-        <input value="<?php echo $entrenador ?>" name="id" required type="text" id="id" class="form-control" disabled>
+        <input value="<?php echo $entrenador ?>" name="id" required type="text" id="id" title="Este es tu ID de entrenador" class="form-control" disabled>
     </div>
     <div class="form-group">
         <label for="nombre" class="cliente-vista__label">Nombre:</label>
-        <input value="" name="nombrecompleto" required type="text" id="nombrecompleto" class="form-control">
+        <input  title="Escribe tu nombre completo iniciando con mayuscula cada palabra" placeholder="Ejemplo: Nombre Apellido1 Apellido2" pattern="^[A-Z]{1}[\p{L} \.'\-]+$" name="nombrecompleto" required type="text" id="nombrecompleto" class="form-control">
     </div>
     <div class="form-group">
         <label for="nombre" class="cliente-vista__label">Usuario:</label>
-        <input value="" name="usuario" required type="email" id="usuario" class="form-control">
+        <input value="" title="Escribe tu correo electronico" placeholder="Ejemplo: example@correo.com" name="usuario" required type="email" id="usuario" class="form-control">
     </div>
     <div class="form-group">
         <label for="nombre" class="cliente-vista__label">Contraseña:</label>
-        <input value="" name="password" required type="password" id="password" class="form-control">
+        <input value="" title="Escribe tu contraseña" name="password" required type="password" id="password" class="form-control">
     </div>
     <div class="form-group">
         <label for="nombre" class="cliente-vista__label">Telefono:</label>
-        <input value="" name="telefono" required type="text" id="telefono" class="form-control">
+        <input value="" title="Escribe tu telefono con 10 digitos" name="telefono" placeholder="Ejemplo: 2299063184" pattern="^[0-9]{10}$" required type="text" id="telefono" class="form-control">
     </div>
     <div class="form-group">
         <label for="nombre" class="cliente-vista__label">Nutriologo ID:</label>
-        <input value="" name="nutriologoid" required type="number" min="0" max="1" id="nutriologoid" class="form-control">
+        <input value="" pattern="^[0-9]{1,3}" title="Asigna un nutriologo existente" placeholder="Ejemplo: 1" name="nutriologoid" id="nutriologoid" class="form-control">
     </div>
     <button type="submit" class="btn btn-black" name="btnAgregarCliente">Agregar Cliente</button>
 </form>
