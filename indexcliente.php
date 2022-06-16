@@ -25,7 +25,7 @@ $nombre = select_cliente_id($clienteid);
 </head>
 <body>
     <?php include 'navcliente.php' ?>
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
             <div class="col-md-12">
                 <h2 class="entrenador__titulo mb-4" id="viewclients">Rutina de <?php echo $nombre[0][2] ?></h2>
