@@ -46,6 +46,34 @@ function select_nutriologos() {
         return 0;
     }
 }
+function select_nutriologoss() {
+    try {
+        $cn = conexion();
+        $sqlSelect = "SELECT * FROM nutriologo";
+        $nutriologosSelect = $cn->query($sqlSelect);
+        if($nutriologosSelect->num_rows > 0){
+            $row = $nutriologosSelect -> fetch_all();
+            return $row;
+        }
+        return "No hay nutriologos";
+    } catch (Exception $e) {
+        return 0;
+    }
+}
+function select_entrenadores() {
+    try {
+        $cn = conexion();
+        $sqlSelect = "SELECT * FROM entrenador";
+        $nutriologosSelect = $cn->query($sqlSelect);
+        if($nutriologosSelect->num_rows > 0){
+            $row = $nutriologosSelect -> fetch_all();
+            return $row;
+        }
+        return "No hay nutriologos";
+    } catch (Exception $e) {
+        return 0;
+    }
+}
 
 function select_clientes_entrenador($entrenadorid)
 {

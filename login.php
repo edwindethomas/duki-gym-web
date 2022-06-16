@@ -56,6 +56,21 @@ if(isset($_POST['btnLogin'])){
     
                 header("Location: ./indexcliente.php");
             }
+            $SqlSeleccionar = "SELECT * FROM administrador WHERE administrador.usuario='$usuario' AND administrador.password='$password'";
+            $UsuarioSelect = $cn->query($SqlSeleccionar);
+            if($UsuarioSelect->num_rows > 0) {
+                $Row = $UsuarioSelect -> fetch_assoc();
+                $Mensaje = "Prueba Usuario".$Row['nombrecompleto']." ".$Row['usuario']." ".$Row['password'];
+                $array = implode(" ",$Row);
+    
+                
+                $_SESSION['UserName'] = $Row['nombrecompleto'];
+                $_SESSION['UserId'] = $Row['usuario'];
+                $_SESSION['Id'] = $Row['id'];
+                $_SESSION['LogueadoA'] = true;
+    
+                header("Location: ./indexadmin.php");
+            }
             return "CREDENCIALES DE USUARIO INEXISTENTES, VUELVA A INTENTARLO";
         }catch (Exception $e){
             return $e;
