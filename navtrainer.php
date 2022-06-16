@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
 
-            <a class="navbar-brand" href="indexentrenador.php">DUKI GYM: Entrenador</a>
+            <h3 class="nav-brand" style="color:white;">DUKI GYM: Entrenador</h3>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
