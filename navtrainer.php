@@ -7,7 +7,7 @@
                 <ul class="navbar-nav ml-lg-auto">
 
                     <li class="nav-item">
-                        <a href="./indexentrenador.php#viewclients" class="nav-link">Ver clientes</a>
+                        <a href="./indexentrenador.php" class="nav-link">Ver clientes</a>
                     </li>
                     <li class="nav-item">
                         <a href="./agregarcliente.php" class="nav-link">Agregar cliente</a>
