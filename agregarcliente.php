@@ -11,11 +11,6 @@ if(isset($_POST['btnAgregarCliente'])){
     $telefono = $_POST['telefono'];
     $nutriologoid = $_POST['nutriologoid'];
 
-    $cn = conexion();
-    $SqlSeleccionar = "SELECT * FROM nutriologo WHERE nutriologo.id='$nutriologoid'";
-    $NutriologoSelect = $cn->query($SqlSeleccionar);
-    
-    if($NutriologoSelect->num_rows > 0) {
         try {
             $cn = conexion();
             $status = 1;
@@ -28,8 +23,4 @@ if(isset($_POST['btnAgregarCliente'])){
             echo ("$e");
         }
     }
-    else{
-        header("Location: ./agregarcliente.php");
-    }
-}
 ?>

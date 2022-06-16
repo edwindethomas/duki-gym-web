@@ -32,6 +32,21 @@ function select_nutriologo($usuario) {
     }
 }
 
+function select_nutriologos() {
+    try {
+        $cn = conexion();
+        $sqlSelect = "SELECT id, nombrecompleto FROM nutriologo";
+        $nutriologosSelect = $cn->query($sqlSelect);
+        if($nutriologosSelect->num_rows > 0){
+            $row = $nutriologosSelect -> fetch_all();
+            return $row;
+        }
+        return "No hay nutriologos";
+    } catch (Exception $e) {
+        return 0;
+    }
+}
+
 function select_clientes_entrenador($entrenadorid)
 {
     try {

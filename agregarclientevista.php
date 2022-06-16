@@ -4,6 +4,9 @@ if(!isset($_SESSION['LogueadoE'])){
     header("Location: ./login.php");
 }
 $entrenador = $_SESSION['Id'];
+
+require_once "./bd/selects.php";
+$nutriologos = select_nutriologos();
 ?>
 
 <!DOCTYPE html>
@@ -41,16 +44,30 @@ $entrenador = $_SESSION['Id'];
     </div>
     <div class="form-group">
         <label for="nombre" class="cliente-vista__label">Contraseña:</label>
-        <input value="" title="Escribe tu contraseña" name="password" required type="password" id="password" class="form-control">
+        <input value="" title="Escribe tu contraseña" name="password"  placeholder="Escribe tu contraseña" required type="password" id="password" class="form-control">
     </div>
     <div class="form-group">
         <label for="nombre" class="cliente-vista__label">Telefono:</label>
         <input value="" title="Escribe tu telefono con 10 digitos" name="telefono" placeholder="Ejemplo: 2299063184" pattern="^[0-9]{10}$" required type="text" id="telefono" class="form-control">
     </div>
     <div class="form-group">
-        <label for="nombre" class="cliente-vista__label">Nutriologo ID:</label>
-        <input value="" pattern="^[0-9]{1,3}" title="Asigna un nutriologo existente" placeholder="Ejemplo: 1" name="nutriologoid" id="nutriologoid" class="form-control">
+        <label for="nombre" class="cliente-vista__label">Nutriologo:</label>
+        <select title="Selecciona un nutriologo" name="nutriologoid" placeholder="" required type="text" id="nutriologoid" class="form-control">
+    <?php
+        if($nutriologos=="No hay nutriologos"){
+            echo "No hay nutriologos";
+        }
+        else{
+        foreach($nutriologos as $nutriologo){
+        ?>
+        <option value="<?php echo $nutriologo[0] ?>" id="nutriologoid"><?php echo $nutriologo[1] ?></option>
+    <?php
+           }
+        }
+    ?>
+     </select>
     </div>
+
     <button type="submit" class="btn btn-black" name="btnAgregarCliente">Agregar Cliente</button>
 </form>
             </div>
