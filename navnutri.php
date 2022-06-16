@@ -10,7 +10,7 @@
                         <a href="./indexnutricionista.php" class="nav-link">Ver clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a href="./administrardieta.php" class="nav-link">Administrar Dieta</a>
+                        <a href="./administrardieta.php" class="nav-link">Administrar Dietas</a>
                     </li>
                     <li class="nav-item">
                         <a href="./logout.php" class="nav-link">Cerrar Sesion</a>

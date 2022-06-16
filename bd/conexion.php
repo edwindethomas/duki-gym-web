@@ -2,9 +2,9 @@
     function conexion(){
         #Parametros de conexión
         $dbHost = "localhost";
-        $dbUser = "root";
-        $dbPass = "";
-        $dbData = "dukigym";
+        $dbUser = "u117281852_pweb0802";
+        $dbPass = "Pweb0802";
+        $dbData = "u117281852_pweb0802";
 
         #Diver mejorado mysqli (PDO,OO)
 

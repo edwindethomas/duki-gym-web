@@ -17,6 +17,7 @@ function select_entrenador($usuario) {
     }
 }
 
+
 function select_nutriologo($usuario) {
     try {
         $cn = conexion();
@@ -145,6 +146,38 @@ function select_cliente_id($id){
         return 0;
     }
 }
+
+
+function select_entrenador_id($id) {
+    try {
+        $cn = conexion();
+        $sqlSelect = "SELECT * FROM entrenador WHERE entrenador.id = '$id'";
+        $entrenadorSelect = $cn->query($sqlSelect);
+        if($entrenadorSelect->num_rows > 0){
+            $row = $entrenadorSelect -> fetch_all();
+            return $row;
+        }
+        return "No se encontró el usuario";
+    } catch (Exception $e) {
+        return 0;
+    }
+}
+function select_nutriologo_id($id) {
+    try {
+        $cn = conexion();
+        $sqlSelect = "SELECT * FROM nutriologo WHERE nutriologo.id = '$id'";
+        $nutriologoSelect = $cn->query($sqlSelect);
+        if($nutriologoSelect->num_rows > 0){
+            $row = $nutriologoSelect -> fetch_all();
+            return $row;
+        }
+        return "No se encontró el usuario";
+    } catch (Exception $e) {
+        return 0;
+    }
+}
+
+
 function update_cliente_id($id,$nombrecompleto,$usuario,$password,$status,$telefono)
 {
     try {

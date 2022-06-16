@@ -53,8 +53,8 @@ $entrenadores = select_entrenadores();
                             <td><?php echo $entrenador[3] ?></td>
                             <td><?php echo $entrenador[4] ?></td>
                             <td><?php echo $entrenador[5] ?></td>
-                            <td><?php echo '<a href="editarcliente.php?id='.$entrenador[0].'" class="btn btn-primary" >Editar</a>'?></td>
-                            <td><?php echo '<a href="eliminarcliente.php?id='.$entrenador[0].'" class="btn btn-danger" >Borrar</a>'?></td>
+                            <td><?php echo '<a href="editarentrenador.php?id='.$entrenador[0].'" class="btn btn-primary" >Editar</a>'?></td>
+                            <td><?php echo '<a href="borrarentrenador.php?id='.$entrenador[0].'" class="btn btn-danger" >Borrar</a>'?></td>
                         </tr>
                         <?php
                            }

@@ -53,8 +53,8 @@ $nutriologos = select_nutriologoss();
                             <td><?php echo $nutriologo[3] ?></td>
                             <td><?php echo $nutriologo[4] ?></td>
                             <td><?php echo $nutriologo[5] ?></td>
-                            <td><?php echo '<a href="editarcliente.php?id='.$nutriologo[0].'" class="btn btn-primary" >Editar</a>'?></td>
-                            <td><?php echo '<a href="eliminarcliente.php?id='.$nutriologo[0].'" class="btn btn-danger" >Borrar</a>'?></td>
+                            <td><?php echo '<a href="editarnutriologo.php?id='.$nutriologo[0].'" class="btn btn-primary" >Editar</a>'?></td>
+                            <td><?php echo '<a href="borrarnutriologo.php?id='.$nutriologo[0].'" class="btn btn-danger" >Borrar</a>'?></td>
                         </tr>
                         <?php
                            }

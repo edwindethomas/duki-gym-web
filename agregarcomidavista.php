@@ -42,7 +42,7 @@ $clienteid = $_GET["id"];
     </div>
     <div class="form-group">
         <label for="hora" class="cliente-vista__label">Hora:</label>
-        <input value="" pattern="^([0-1]?[0-9]|[2][0-3]):([0-5][0-9])(:[0-5][0-9])?$"name="hora" placeholder="Ejemplo: 10:00" title="Escribe una hora" required type="text" id="hora" class="form-control">
+        <input value="" pattern="^([0-1]?[0-9]|[2][0-3]):([0-5][0-9])(:[0-5][0-9])?$"name="hora" placeholder="Ejemplo: 07:00" title="Escribe una hora en formato de 12 hrs" required type="text" id="hora" class="form-control">
     </div>
     <div class="form-group">
         <label for="dia" class="cliente-vista__label">Dia:</label>

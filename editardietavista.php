@@ -47,7 +47,7 @@ $comidas = select_comida_dieta($id);
     </div>
     <div class="form-group">
         <label for="hora" class="cliente-vista__label">Hora:</label>
-        <input value="<?php echo $comidas[0][4] ?>" pattern="^([0-1]?[0-9]|[2][0-3]):([0-5][0-9])(:[0-5][0-9])?$" title="Escribe una hora" name="hora" placeholder="Ejemplo: 10:00" required type="text" id="hora" class="form-control">
+        <input value="<?php echo $comidas[0][4] ?>" pattern="^([0-1]?[0-9]|[2][0-3]):([0-5][0-9])(:[0-5][0-9])?$" title="Escribe una hora en formato 12 hrs" name="hora" placeholder="Ejemplo: 07:00" required type="text" id="hora" class="form-control">
     </div>
 
     <div class="form-group">
