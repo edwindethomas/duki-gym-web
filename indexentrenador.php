@@ -30,7 +30,7 @@ $clientes = select_clientes_entrenador($entrenadorid);
     <?php include 'navtrainer.php' ?>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 mt-5">
                 <h2 class="entrenador__titulo" id="viewclients">Lista de clientes</h2>
                 <table class="table">
                     <thead>

@@ -26,7 +26,7 @@ $rutinas = select_rutina_cliente($clienteid);
 </head>
 <body>
     <?php include './navtrainer.php';?>
-    <div class="container mt-2">
+    <div class="container mt-5">
         <div class="row">
             <div class="col-md-12">
     <form method="POST">

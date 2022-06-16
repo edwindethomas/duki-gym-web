@@ -27,9 +27,9 @@ $rutinas = select_ejercicio_rutina($id);
 </head>
 <body>
     <?php include './navtrainer.php';?>
-    <div class="container entrenador__titulo">
-        <div class="row">
-            <div class="col-md-12">
+    <div class="container mt-5">
+        <div class="row mt-5">
+            <div class="col-md-12 mt-5">
     <form method="POST">
     <div class="form-group">
     <h2 class="mt-2" id="viewclients">Actualizar rutina</h2>
