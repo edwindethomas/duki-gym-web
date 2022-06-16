@@ -169,6 +169,32 @@ function eliminar_cliente($id)
        return $e;
     }
 }
+function select_dieta_cliente($clienteid)
+{
+    try{
+        $cn = conexion();
+        $sqlSelect = "SELECT * FROM dieta WHERE dieta.clienteid = '$clienteid'";
+        $dietaSelect = $cn->query($sqlSelect);
+        $dieta = $dietaSelect->fetch_all();
+        return $dieta;
+    }catch(Exception $e){
+        return 0;
+    }
+}
+
+function select_comida_dieta($id)
+{
+    try {
+        $cn = conexion();
+        $sqlSelect = "SELECT * FROM dieta WHERE dieta.id = '$id'";
+        $dietaSelect = $cn->query($sqlSelect);
+        $dieta = $dietaSelect->fetch_all();
+        return $dieta;
+    } catch (Exception $e) {
+        return 0;
+    }
+    
+}
 
 #echo update_cliente_id("1","Edwin De Thomas Luna","edwin@hotmail.com","1234","1","2292193329");
 #echo eliminar_cliente("2");
