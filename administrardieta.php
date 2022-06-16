@@ -28,10 +28,10 @@ $clientes = select_clientes_nutriologo($nutricionistaid);
 </head>
 <body>
     <?php include 'navnutri.php' ?>
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
-            <div class="col-md-12 mt-5">
-                <h2 class="entrenador__titulo" id="viewclients">Lista de clientes</h2>
+            <div class="col-md-12">
+                <h2 class="entrenador__titulo" id="viewclients">Rutina de clientes</h2>
                 <table class="table">
                     <thead>
                         <tr>
@@ -40,7 +40,7 @@ $clientes = select_clientes_nutriologo($nutricionistaid);
                             <th>Usuario</th>
                             <th>Status</th>
                             <th>Telefono</th>
-                            <th>Actualizar</th>
+                            <th>Ver Dieta</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -53,7 +53,7 @@ $clientes = select_clientes_nutriologo($nutricionistaid);
                             <td><?php echo $cliente[2] ?></td>
                             <td><?php echo $cliente[3] ?></td>
                             <td><?php echo $cliente[4] ?></td>
-                            <td><?php echo '<a href="editarclientenutri.php?id='.$cliente[0].'" class="btn btn-primary" >Editar</a>'?></td>
+                            <td><?php echo '<a href="verdieta.php?id='.$cliente[0].'" class="btn btn-success" >Ver</a>'?></td>
                         </tr>
                         <?php
                            }
